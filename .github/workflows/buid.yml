@@ -4,7 +4,6 @@ on: [push]
 jobs:
   build:
     name: Build
-
     #https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
     #runs-on: ubuntu-latest # Not working with  ubuntu-latest /  ubuntu-22.04
     # Error: /lib/x86_64-linux-gnu/libgio-2.0.so.0: undefined symbol: g_module_open_full
@@ -14,28 +13,24 @@ jobs:
     - name: install fuse and libfuse2
       run: |
         sudo apt install fuse libfuse2
-
     - name: Get pkg2appimage
       run: |
         curl --location -o pkg2appimage https://github.com/AppImageCommunity/pkg2appimage/releases/download/continuous/pkg2appimage-1807-x86_64.AppImage
         chmod +x pkg2appimage
-
         ls -lahR
     - name: Make AppImage
       run: |
         ./pkg2appimage Authy.yml
         ls -lahR
-
     #  Build - Error: Resource not accessible by integration
     # Change Settings -> Actions -> General -> Workflow Permissions to allow read and write:
     # https://github.com/actions/first-interaction/issues/10#issuecomment-1506118886
-
     # https://github.com/marketplace/actions/upload-to-github-release
     - uses: xresloader/upload-to-github-release@main
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-          file: "out/Authy-*.AppImage"
+          file: "out/Authy*.AppImage"
           #delete_file: "random-name-*.txt;random-*.txt"
           release_id: ${{ steps.create_release.outputs.id }}
           #overwrite: true
