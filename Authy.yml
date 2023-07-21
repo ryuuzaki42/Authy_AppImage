@@ -6,12 +6,12 @@ app: Authy
 ingredients:
   script:
     - _snapid="H8ZpNgIoPyvmkgxOWw5MSzsXK1wRZiHn"
-    - _snaprev="19"
+    - _snaprev="20"
     - source="https://api.snapcraft.io/api/v1/snaps/download/${_snapid}_${_snaprev}.snap"
     - wget $source -O authy.snap
     - unsquashfs -f -d "authy" "authy.snap"
     #
-    - VERSION=2.3.0
+    - VERSION=2.4.0
     - echo $VERSION > VERSION
 
 
