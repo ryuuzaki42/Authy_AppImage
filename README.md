@@ -1,5 +1,5 @@
+
 # Authy_AppImage
-Using Github Actions to make a Authy AppImage
 
 https://authy.com/
 
