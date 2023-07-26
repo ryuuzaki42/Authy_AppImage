@@ -4,15 +4,11 @@ on: [push]
 jobs:
   build:
     name: Build
-    # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
-    # runs-on: ubuntu-latest # Not working with ubuntu-latest /  ubuntu-22.04
-    # Error: /lib/x86_64-linux-gnu/libgio-2.0.so.0: undefined symbol: g_module_open_full
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@main
     - name: install fuse and libfuse2
-      run: |
-        sudo apt install fuse libfuse2
+      run: sudo apt install fuse libfuse2
 
     - name: Get pkg2appimage
       run: |
