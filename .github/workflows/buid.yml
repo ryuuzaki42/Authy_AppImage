@@ -27,7 +27,7 @@ jobs:
 
         cd out/
         fileName=$(ls Authy*.AppImage) 
-        echo "$fileName"
+        echo "fileName: $fileName"
         fileNameNew=$(echo "$fileName" | sed 's/.AppImage//')
         mv "$fileName" "${fileNameNew}-1_JB.AppImage"
         ls -lahR
