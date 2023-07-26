@@ -36,4 +36,6 @@ script:
   - Categories=Utility;
   - Comment=Twilio Authy two factor authentication desktop application
   - EOF
+  - pwd
+  - ls -lah
   - cp ../README.md .
