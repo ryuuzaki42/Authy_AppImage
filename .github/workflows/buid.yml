@@ -4,12 +4,12 @@ on: [push]
 jobs:
   build:
     name: Build
-    #https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
-    #runs-on: ubuntu-latest # Not working with  ubuntu-latest /  ubuntu-22.04
+    # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
+    # runs-on: ubuntu-latest # Not working with ubuntu-latest /  ubuntu-22.04
     # Error: /lib/x86_64-linux-gnu/libgio-2.0.so.0: undefined symbol: g_module_open_full
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - name: install fuse and libfuse2
       run: |
         sudo apt install fuse libfuse2
@@ -33,7 +33,7 @@ jobs:
         ls -lahR
         cd ../
 
-    #  Build - Error: Resource not accessible by integration
+    # Build - Error: Resource not accessible by integration
     # Change Settings -> Actions -> General -> Workflow Permissions to allow read and write:
     # https://github.com/actions/first-interaction/issues/10#issuecomment-1506118886
 
