@@ -1,6 +1,8 @@
 
 # Authy_AppImage
 
+## Repository: https://github.com/ryuuzaki42/Authy_AppImage
+
 https://authy.com/
 
 https://snapcraft.io/authy
