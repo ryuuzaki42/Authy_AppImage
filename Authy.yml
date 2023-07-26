@@ -38,4 +38,6 @@ script:
   - EOF
   - pwd
   - ls -lah
-  - cp ../README.md .
+  - ls -lah ../
+  - ls -lah ../../
+  - cp ../../README.md .
