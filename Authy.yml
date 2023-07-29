@@ -1,8 +1,5 @@
 app: Authy
 
-# https://authy.com/
-# https://snapcraft.io/authy
-
 ingredients:
   script:
     - _snapid="H8ZpNgIoPyvmkgxOWw5MSzsXK1wRZiHn"
@@ -14,7 +11,6 @@ ingredients:
     - echo $VERSION > VERSION
 
 script:
-  #- sed -i.bak '2i SNAP=./bin' ../authy/command.sh
   - cp -r ../authy/* usr/bin/
   - find . -name icon.png -exec cp {} authy.png \;
   - convert authy.png -resize 512x512 usr/share/icons/hicolor/512x512/apps/authy.png
