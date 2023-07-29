@@ -12,12 +12,14 @@ jobs:
 
     - name: Get pkg2appimage
       run: |
+        set -x
         curl --location -o pkg2appimage https://github.com/AppImageCommunity/pkg2appimage/releases/download/continuous/pkg2appimage-1807-x86_64.AppImage
         chmod +x pkg2appimage
         ls -lah
 
     - name: Make AppImage
       run: |
+        set -x
         ./pkg2appimage Authy.yml
         ls -lahR
 
