@@ -2,13 +2,16 @@ app: Authy
 
 ingredients:
   script:
+    - set -x
+    - version=$(grep -o "Authy:.*" README.md | cut -d ' ' -f2)
+    - echo "Calibre version: $version"
     - _snapid="H8ZpNgIoPyvmkgxOWw5MSzsXK1wRZiHn"
     - _snaprev="21"
     - source="https://api.snapcraft.io/api/v1/snaps/download/${_snapid}_${_snaprev}.snap"
     - wget $source -O authy.snap
     - unsquashfs -f -d "authy" "authy.snap"
-    - VERSION=2.4.1
-    - echo $VERSION > VERSION
+    #- VERSION=2.4.1
+    - echo $version > VERSION
 
 script:
   - cp -r ../authy/* usr/bin/
