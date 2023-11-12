@@ -27,15 +27,21 @@ jobs:
       run: |
         set -x
         ./pkg2appimage Authy.yml
-        ls -lahR
+        ls -lah
 
+        version=$(grep -o "Authy:.*" ../README.md | cut -d ' ' -f2)
+        echo "Authy version: $version"
+        
         cd out/
         fileName=$(ls Authy*.AppImage) 
         echo "fileName: $fileName"
         fileNameNew=$(echo "$fileName" | sed 's/.AppImage//')
-        mv "$fileName" "${fileNameNew}-1_JB.AppImage"
-        md5sum "${fileNameNew}-1_JB.AppImage" > "${fileNameNew}-1_JB.AppImage.md5"
-        ls -lahR
+        fileNameNew=$(echo "$fileNameNew" | cut -d'-' -f2-)
+        fileNameFinal="Authy_Desktop-${version}${fileNameNew}-1_JB.AppImage"
+
+        mv "$fileName" "$fileNameFinal"
+        md5sum "$fileNameFinal" > "${fileNameFinal}.md5"
+        ls -lah
         cd ../
 
     # Build - Error: Resource not accessible by integration
