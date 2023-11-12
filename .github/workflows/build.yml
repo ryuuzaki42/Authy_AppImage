@@ -60,3 +60,5 @@ jobs:
           verbose: true
           #tags: true
           draft: false
+          default_release_name: "Authy v"
+
