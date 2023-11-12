@@ -7,7 +7,6 @@ ingredients:
     - echo "Authy version: $version"
     #- VERSION=2.4.1
     - echo $version > VERSION
-    - exit
     - _snapid="H8ZpNgIoPyvmkgxOWw5MSzsXK1wRZiHn"
     - _snaprev="21"
     - source="https://api.snapcraft.io/api/v1/snaps/download/${_snapid}_${_snaprev}.snap"
