@@ -7,9 +7,9 @@ ingredients:
     - ls -lah ../
     - ls -lah ../../
     - _snapid="H8ZpNgIoPyvmkgxOWw5MSzsXK1wRZiHn"
-    - version=$(grep -o "Authy:.*" ../../README.md | cut -d ' ' -f2)
+    - version=$(grep -o "Authy:.*" ../README.md | cut -d ' ' -f2)
     - echo "Authy version: $version"
-    - _snaprev=$(grep -o "Snap version:.*" ../../README.md | cut -d ' ' -f2)
+    - _snaprev=$(grep -o "Snap version:.*" ../README.md | cut -d ' ' -f2)
     - echo "Snap version: $_snaprev"
     - source="https://api.snapcraft.io/api/v1/snaps/download/${_snapid}_${_snaprev}.snap"
     - wget $source -O authy.snap
