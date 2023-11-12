@@ -29,7 +29,7 @@ script:
   - cat > authy.desktop <<EOF
   - [Desktop Entry]
   - Type=Application
-  - Name=Authy Desktop
+  - Name=Authy Desktop-2.4.1
   - Icon=authy
   - Exec=authy %u
   - Terminal=false
