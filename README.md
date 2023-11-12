@@ -2,8 +2,8 @@
 # Authy_AppImage
 
 ## Repository: https://github.com/ryuuzaki42/Authy_AppImage
-    Authy: 2.4.1
-    Snap version: 21
+    Authy: 2.4.2
+    Snap version: 22
 
 ---
 https://authy.com/
