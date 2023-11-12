@@ -36,6 +36,7 @@ script:
   - StartupWMClass=Authy Desktop
   - Categories=Utility;
   - Comment=Twilio Authy two factor authentication desktop application
+  - X-AppImage-Version=1.2.2
   - EOF
   - pwd
   - ls -lah
