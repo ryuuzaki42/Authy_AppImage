@@ -26,6 +26,7 @@ script:
   - convert authy.png -resize 32x32 usr/share/icons/hicolor/32x32/apps/authy.png
   - convert authy.png -resize 24x24 usr/share/icons/hicolor/24x24/apps/authy.png
   - convert authy.png -resize 22x22 usr/share/icons/hicolor/22x22/apps/authy.png
+  - version=$(grep -o "Authy:.*" ../README.md | cut -d ' ' -f2)
   - cat > authy.desktop <<EOF
   - [Desktop Entry]
   - Type=Application
