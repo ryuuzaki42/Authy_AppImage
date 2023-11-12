@@ -3,6 +3,8 @@
 
 ## Repository: https://github.com/ryuuzaki42/Authy_AppImage
     Authy: 2.4.1
+    Snap version: 21
+
 ---
 https://authy.com/
 
