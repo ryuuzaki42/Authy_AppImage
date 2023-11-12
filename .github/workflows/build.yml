@@ -29,7 +29,7 @@ jobs:
         ./pkg2appimage Authy.yml
         ls -lah
 
-        version=$(grep -o "Authy:.*" ../README.md | cut -d ' ' -f2)
+        version=$(grep -o "Authy:.*" README.md | cut -d ' ' -f2)
         echo "Authy version: $version"
         
         cd out/
