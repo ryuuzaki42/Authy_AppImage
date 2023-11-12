@@ -37,8 +37,6 @@ script:
   - Categories=Utility;
   - Comment=Twilio Authy two factor authentication desktop application
   - EOF
-  - version=$(grep -o "Authy:.*" ../README.md | cut -d ' ' -f2)
-  - sed "s/=Authy Desktop/=Authy Desktop-$version/1" authy.desktop 
   - cat authy.desktop
   - pwd
   - ls -lah
