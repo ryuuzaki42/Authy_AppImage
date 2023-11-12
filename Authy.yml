@@ -4,6 +4,8 @@ ingredients:
   script:
     - pwd
     - ls -lah
+    - ls -lah ../
+    - ls -lah ../../
     - _snapid="H8ZpNgIoPyvmkgxOWw5MSzsXK1wRZiHn"
     - version=$(grep -o "Authy:.*" README.md | cut -d ' ' -f2)
     - echo "Authy version: $version"
