@@ -29,14 +29,13 @@ script:
   - cat > authy.desktop <<EOF
   - [Desktop Entry]
   - Type=Application
-  - Name=Authy Desktop-2.4.1
+  - Name=Authy Desktop-$version
   - Icon=authy
   - Exec=authy %u
   - Terminal=false
   - StartupWMClass=Authy Desktop
   - Categories=Utility;
   - Comment=Twilio Authy two factor authentication desktop application
-  - X-AppImage-Version=1.2.2
   - EOF
   - pwd
   - ls -lah
