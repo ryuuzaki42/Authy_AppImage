@@ -21,4 +21,12 @@ https://builds.garudalinux.org/repos/chaotic-aur/x86_64/#authy
 https://support.authy.com/hc/en-us/articles/17592416719003-Business-customer-guide-End-of-Life-EOL-for-use-of-Authy-API-with-Twilio-Authy-Desktop-apps
 
 ---
+
+To "export" the keys form Authy, see the links below.
+
+https://gist.github.com/gboudreau/94bb0c11a6209c82418d01a59d958c93
+
+https://www.youtube.com/watch?v=n7ruB_uFcj4
+
+---
 https://snapcraft.io/authy
